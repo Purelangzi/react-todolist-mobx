@@ -55,7 +55,7 @@ function Task () {
           {taskStore.list.map(item => (
             <li
               key={item.id}
-              className="todo"
+              className={item.isDone?'todo completed':'todo'}
             >
               <div className="view">
                 <input className="toggle" type="checkbox" checked={item.isDone} onChange={() => handleChange(item.id)} />
@@ -65,15 +65,6 @@ function Task () {
             </li>
 
           ))}
-          {/* <li
-              className="todo completed"
-            >
-              <div className="view">
-                <input className="toggle" type="checkbox" defaultChecked={true} />
-                <label >learn react</label>
-                <button className="destroy"></button>
-              </div>
-            </li> */}
         </ul>
 
       </section>
